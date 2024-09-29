@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl">
+	
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Yade Kleton">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>KFC, Yade</title>
+	
+	<link href="styles/style.css" rel="stylesheet">
+	<link rel="icon" type="image/svg+xml" href="images/kfc-logo_whiteedge.png">
+
+	<link href="style.css" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+	<img src="images/kfc-logo_whiteedge.png" alt="KFC Homepagina">
+	<nav>
+        <a href="index.html">Bestellen</a>
+        <a href="index.html">Nieuwsbrief</a>
+    </nav>
+</header>
+
+<main>
+
+<h1>DE COLONEL'S NIEUWSBRIEF</h1>
+<p>Altijd up-to-date met de Colonel's nieuwsbrief. In de e-nieuwsbrief deelt de Colonel onze laatste deals, handige tips, gave winacties, evenementen, gratis cadeautjes... en nog zoveel meer! Klinkt heerlie toch? Inschrijven die handel!</p>
+
+    <form action="/submit" method="POST">
+        <img id="logo2" src="images/kfc-logo_whiteedge.png" alt="Logo van KFC">
+        
+        <h3>Blijf altijd up-to-date met aanbiedingen, acties en nieuws van KFC Nederland!</h3>
+
+        <label for="first-name">Voornaam</label>
+        <input type="text" id="first-name" name="first-name">
+        
+        <label for="last-name">Achternaam</label>
+        <input type="text" id="last-name" name="last-name">
+        
+        <label for="email">E-mailadres</label>
+        <input type="email" id="email" name="email">
+        
+        <label for="birthday">Geboortedatum</label>
+        <input type="date" id="birthday" name="birthday">
+        
+        <h4>Marketingtoestemmingen</h4>
+        <p>Bevestig dat KFC Nederland via onderstaande manier contact met je mag opnemen:</p>
+
+        <label for="newsletter">E-Mail nieuwsbrief</label>
+        <input type="checkbox" id="newsletter" name="newsletter">
+            
+        <p>Door je te abonneren op onze nieuwsbrief ga je ermee akkoord dat wij jouw gegevens kunnen gebruiken voor het sturen van marketingcommunicatie. Je ontvang dan gemiddeld 2x per maand een nieuwsbrief met nieuws en promoties. Door je in te schrijven voor de KFC nieuwsbrief verklaar je 16 jaar of ouder te zijn. Je persoonsgegevens worden verwerkt conform de Privacy- en Cookieverklaring op onze website. Je kunt verleende toestemming altijd intrekken. Dat kan door op de afmeldlink in de nieuwsbrief te klikken. Je zult dan geen nieuwsbrieven meer ontvangen. Wil je meer weten over hoe KFC Nederland omgaat met jouw persoonsgegevens? Lees dan onze Privacy- en Cookieverklaring op onze website voor meer informatie: https://kfc.nl/privacy</p>
+
+        <button type="submit">Inschrijven</button>
+</form>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+	
+</html>

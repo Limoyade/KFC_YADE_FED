@@ -1,0 +1,435 @@
+*{
+    cursor: wait;}
+
+:root{
+    --merk-kleur: #e4002b;
+    --titel-kleur: #e4002b;
+    --titel-kleur2: #ffff;
+    --tekst-kleur: #4a4a4a;
+    --button: #ffff;
+    --accent-kleur: #48010e;
+    --extra-tekst: #000000;
+    --background: #ffff;
+}
+
+@media (prefers-color-scheme:dark) {
+    :root{ 
+    --merk-kleur: #e4002b;
+    --titel-kleur: #ffff;
+    --titel-kleur2: #ffff;
+    --tekst-kleur: #ffff;
+    --button: #ffff;
+    --accent-kleur: #48010e;
+    --extra-tekst: #000000;
+    --background: #242424;
+    }
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: var(--background);
+}
+
+h1{
+    color: var(--titel-kleur);
+}
+
+/*bron om de h1 onzichtbaar te maken: Chat GPT*/
+#index{
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px); /* Verberg de tekst */
+}
+
+h2{
+    font-size: clamp(1.5rem, 10vw, 2.5rem);     
+    font-weight: 900;
+    font-style: normal;
+}
+
+h3{
+    font-size: clamp(1rem, 7vw, 2rem);     
+    font-weight: 900;
+    font-style: normal;
+}
+
+h4{
+    color: var(--tekst-kleur);
+}
+
+p{
+    font-size: clamp(0.5rem, 5vw, 1rem);     
+    font-weight: 430;
+    font-style: normal;
+    color: var(--tekst-kleur);
+}
+
+
+main{
+    background-color: var(--background);
+}
+
+header {
+    background-color: var(--merk-kleur);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 4.5em;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    z-index: 2;
+}
+
+header img {
+    width: 3.5em;
+    padding-left: 0.5em;
+    padding-top: 0.3em;
+}
+
+nav {
+    display: flex;
+    gap: 1em;
+}
+
+nav a {
+    color: var(--button);
+    padding: 0.5em 1em;
+    font-weight: bold; 
+    background-position: center bottom;
+    text-decoration: none;
+}
+
+@keyframes navigatie {
+    0% {
+      scale:1;
+      background-color: var(--accent-kleur);
+      border-radius: 0.5em;
+    }
+    50% {
+        scale:2;
+        background-color: var(--accent-kleur);
+        border-radius: 0.5em;
+      }
+    100% {
+      scale:3;
+      background-color: var(--accent-kleur);
+      border-radius: 0.5em;
+    }
+  }
+  
+nav a:hover{
+    animation-name:navigatie;
+    animation-duration:3s;
+  }
+
+article{
+    padding: 1em;
+    width: 100%;
+}
+
+/* bron voor de slider (heb dit stap voor stap gevolgd en soms chat GPT extra uitleg gevraagd): https://webdesign.tutsplus.com/how-to-build-a-simple-carousel-with-vanilla-javascript--cms-41734t */
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden; 
+}
+
+.slides-container {
+    height: calc(100vh - 2rem);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.slide-arrow {
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 4rem;
+
+    background-color: var(--button);
+    border: none;
+    font-size: 3rem;
+
+    width: 2rem;
+    padding: 0;
+    opacity: 0.5;
+    transition: opacity 100ms;
+}
+
+.slide-arrow:hover,
+.slide-arrow:focus {
+    opacity: 1;
+}
+
+#slide-arrow-prev {
+    left: 0;
+    padding-left: 0.25rem;
+    border-radius: 0 2rem 2rem 0;
+}
+
+#slide-arrow-next {
+    right: 0;
+    padding-left: 0.75rem;
+    border-radius: 2rem 0 0 2rem;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    flex: 0 0 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+article:nth-of-type(1) img{
+    width: 20em;
+    border-radius: 0.5em; 
+
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+article:nth-of-type(1) h2{
+    color: var(--titel-kleur);
+}
+
+article:nth-of-type(1) h3{
+    color: var(--titel-kleur);
+}
+
+article:nth-of-type(2){
+    background-color: var(--merk-kleur);
+    color: var(--titel-kleur2);
+}
+
+article:nth-of-type(2) h3{
+    color: var(--titel-kleur2);
+}
+
+article:nth-of-type(2) img {
+    width: 15em;
+
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+article:nth-of-type(2) button {
+    background-color: var(--button);
+    color: var(--extra-tekst);
+    border-radius: 0.5em;
+    border: none;
+    padding: 1em;
+
+    font-weight: bold;
+    width: 23em;
+    
+    display: block;
+    margin: 1em auto;
+}
+
+article:nth-of-type(2) button.anders {
+    background-color: var(--accent-kleur);
+    color: var(--button);
+}
+
+article:nth-of-type(3) img {
+    width: 11em;
+}
+
+.app-download-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+article:nth-of-type(3) button {
+    background-color: var(--button);
+    border: none;
+}
+
+article:nth-of-type(3) h3{
+    color: var(--titel-kleur);
+}
+
+article:nth-of-type(3) p {
+    font-size: small;
+}
+
+article:nth-of-type(4) img {
+    width: 20em;
+    border-radius: 0.5em; 
+
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+article:nth-of-type(4) {
+    background-color: var(--merk-kleur);
+    color: var(--button);
+}
+
+article:nth-of-type(4) P{
+    color: var(--button);
+}
+
+article:nth-of-type(4) button {
+    width: 18em;
+    border-radius: 0.5em;
+    border: none;
+    padding: 1em;
+
+    background-color: var(--button);
+    color: var(--extra-tekst);
+    
+    font-weight: bold;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@keyframes button4-animation {
+    0% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.5);
+    }
+}
+  
+  article:nth-of-type(4) button:hover {
+    animation-name: button4-animation;
+    animation-duration:1s;
+    animation-iteration-count:5;
+    animation-fill-mode: forwards; 
+  }
+  
+#logo {
+    width: 7em;
+    padding: 1em;
+}
+
+form {
+    background-color: var(--background); 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--extra-tekst);
+
+    width: 90%;
+
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+label, input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #4a4a4a;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+form img{
+    width: 7em;
+
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@keyframes button-animation {
+    0% { 
+        width: 8em; 
+        border-radius: 0.5em; 
+        background-color: var(--merk-kleur);
+        font-weight: 600;
+    }
+    50% { 
+        width: 12em; 
+        border-radius: .5em; 
+        background-color: var(--accent-kleur); 
+        font-weight: 600;
+    }
+    100% { 
+        width: 8em; 
+        border-radius: 0.5em; 
+        background-color: var(--merk-kleur);
+        font-weight: 600;
+    }
+}
+
+form button {
+    width: 50%; 
+    padding: 0.8em;
+    background-color: var(--merk-kleur);
+    color: var(--button);
+    border-radius: 0.5em;
+    border: none;
+
+    transition: all 0.3s ease;
+
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+form button {
+    animation-name: button-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes logo2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#logo, #logo2 {
+    animation-name: logo2;
+    animation-duration: 1s; 
+    animation-iteration-count: infinite;
+}
+
+main h3{
+    color: var(--titel-kleur);
+}

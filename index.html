@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nl">
+	
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Yade Kleton">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>KFC, Yade</title>
+	
+	<link href="styles/style.css" rel="stylesheet">
+	<link rel="icon" type="image/svg+xml" href="images/kfc-logo_whiteedge.png">
+
+	<link href="style.css" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+	<img src="images/kfc-logo_whiteedge.png" alt="KFC Homepagina">
+	<nav>
+        <a href="nieuwsbrief.html">Bestellen</a>
+        <a href="nieuwsbrief.html">Nieuwsbrief</a>
+    </nav>
+</header>
+
+<main>
+<h1 id="index">Homepage KFC</h1>
+
+<!-- bron voor de slider (heb dit stap voor stap gevolgd en soms chat GPT extra uitleg gevraagd): https://webdesign.tutsplus.com/how-to-build-a-simple-carousel-with-vanilla-javascript--cms-41734t -->
+<div>
+	<button class="slide-arrow" id="slide-arrow-prev" aria-label="Vorige dia">
+		&#8249;
+	</button>
+	<button class="slide-arrow" id="slide-arrow-next" aria-label="Volgende dia">
+		&#8250;
+	</button>	
+
+	<ul class="slides-container" id="slides-container">
+		<li class="slide"><img src="images/slider/herbruikbare_verpakking.png" alt="KFC reclame over het herbruiken van verpakkingen"></li>
+		<li class="slide"><img src="images/slider/kfc_homepage_eten.png" alt="een tafel vol met KFC voedsel"></li>
+		<li class="slide"><img src="images/slider/kfs_homepage_ijsje.png" alt="KFC reclame voor de nieuwe sunday deluxe "></li>
+	</ul>
+</div>
+
+<article>
+	<h2>Nieuws</h2>
+		<img src="images/kfs_nieuws1.png" alt="KFC bucket met de actie Tender Tuesday. Dat zijn 12 chicken tenders voor 10 euro">
+		<h3>NIEUW: TENDER TUESDAY</h3>
+		<p>Nieuw bij KFC: Tender Tuesdy! 12 Crispy Tenders voor maar 10 euro.</p>
+</article>
+
+
+<article>
+	<h3>Vind een KFC in de buurt</h3>
+	<button class="anders">Voer uw locatie in</button>
+	<img src="images/vind_restaurant.png" alt="">
+</article>
+
+
+<article>
+    <h3>Blijf op de hoogte van onze deals en nieuwe producten! Download nu de KFC App!</h3>
+
+    <div class="app-download-buttons">
+        <button aria-label="Download via de Apple Store">
+            <img src="images/apple_logo.png" alt="Apple Store logo">
+        </button>
+        <button aria-label="Download via Google Play Store">
+            <img src="images/google_play.png" alt="Google Play Store logo">
+        </button>
+    </div>
+
+    <p>
+        Apple en het Apple-logo zijn handelsmerken van Apple Inc., geregistreerd in de Verenigde Staten en andere landen. 
+        App Store is een dienstmerk van Apple Inc. Google Play is een handelsmerk van Google Inc. Voorwaarden zijn van toepassing.
+    </p>
+
+    <img src="images/kfc_app_telefoon.png" alt="Afbeelding van een telefoon met de KFC app">
+</article>
+
+<article>
+	<img src="images/kfs_nieuws2.png" alt="">
+	<h2>ALTIJD UP-TO-DATE MET DE COLONEL'S NIEUWSBRIEF</h2>
+	<p>In de e-nieuwsbrief deel de Colonel onze laatste deals, handige tips, gave winacties, evenementen, banan bij KFC, gratis cadeautjes... en nog zoveel meer! Klinkt heerlie toch? Inschrijven die handel!</p>
+	<button>COLONEL'S NIEUWSBRIEF</button>
+</article>
+
+<img id="logo" src="images/kfc-logo_whiteedge.png" alt="Logo van KFC">
+
+</main>
+
+<script src="script.js"></script>
+</body>
+	
+</html>
